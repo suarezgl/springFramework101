@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<!--  INYECCION DE OBJETOS -->
+	<!-- Inyeccion de objeto con el atributo de ref pais -->
+   <bean id="persona" class="com.spring.beans.Persona">
+		<property name="nombre" value="Gringo Jose"></property>
+		<property name="id" value="1"></property>
+		<property name="apodo" value="Pancho Villa"></property>
+		<property name="pais" ref="pais"></property>
+	</bean>
+	 <!-- Inyeccion de objeto con el atributo de ref ciudad   -->
+	
+	<bean id="pais" class="com.spring.beans.Pais">
+		<property name="nombre" value="Peru"></property>
+		<property name="ciudad" ref="ciudad"></property>
+	</bean>
+	<!-- Bean ciudad -->
+	<bean id="ciudad" class="com.spring.beans.Ciudad">
+		<property name="nombre" value="Lima"></property>
+	</bean> 
+	
+</beans>
