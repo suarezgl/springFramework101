@@ -16,7 +16,7 @@ public class App {
 	  //XML
 	  ApplicationContext appContext = new ClassPathXmlApplicationContext("com/spring/xml/beans.xml");
 	  
-	  Persona persona = (Persona) appContext.getBean("personaBeans");
+	  Persona persona = (Persona) appContext.getBean("persona");
 	  
 	  System.out.print("Apodo :" + persona.toString());
 	  

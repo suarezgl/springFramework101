@@ -2,100 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<!-- 
-		Defiendo el Bean de la clase Mundo y asignado el valor a la propiedad saludo
-		Esta modaidad utiliza implicitamente los metodos GET y SET
-		<bean id="mudo" class="com.spring.beans.Mundo">
-		 <property name="saludo" value="hello word"></property>
-		</bean>
-	--> 
-	<!-- Definiedno beans con valores por defecto
-		asignando agumentos por el constructor de la clase Persona
-	 
+
+	
+	<!--  Definiedno beans con valores por defecto
+	   	  asignando agumentos por el constructor de la clase Persona -->
 	<bean id="persona" class="com.spring.beans.Persona">
 		<constructor-arg value="1"></constructor-arg>
 		<constructor-arg value="Leonardo"></constructor-arg>
-		<constructor-arg value="Enigma"></constructor-arg>
-		
+		<constructor-arg value="Enigma"></constructor-arg>		
 	</bean>
-	-->
-
-	<!--   
-	    Pasando valores al constructor de la clase
-	<bean id="personaUNO" class="com.spring.beans.Persona">
-		<constructor-arg type="int" value="14"></constructor-arg>	
-	</bean>
-	-->
-	
-	<!-- tutorial 7 INYECCION DE OBJETOS -->
-	<!-- Inyeccion de objeto con el atributo de ref pais
-	<bean id="persona" class="com.spring.beans.Persona">
-		<property name="nombre" value="Gringo Jose"></property>
-		<property name="id" value="1"></property>
-		<property name="apodo" value="Pancho Villa"></property>
-		<property name="pais" ref="pais"></property>
-	</bean>
-	 Inyeccion de objeto con el atributo de ref ciudad
-	<bean id="pais" class="com.spring.beans.Pais">
-		<property name="nombre" value="Peru"></property>
-		<property name="ciudad" ref="ciudad"></property>
-	</bean>
-	
-	<bean id="ciudad" class="com.spring.beans.Ciudad">
-		<property name="nombre" value="Lima"></property>
-	</bean> -->
-	
-	<!-- tutorial 8 BEANS ANIDADOS  obviando el atributo ref en property -->
-	<!-- <bean id="persona" class="com.spring.beans.Persona">
-		<property name="nombre" value="Gringo Jose"></property>
-		<property name="id" value="1"></property>
-		<property name="apodo" value="Pancho Villa"></property>
-		<property name="pais">
-			<bean id="pais" class="com.spring.beans.Pais">
-				<property name="nombre" value="Peru"></property>
-				<property name="ciudad">
-					<bean id="ciudad" class="com.spring.beans.Ciudad">
-						<property name="nombre" value="CARACAS"></property>
-					</bean>
-				</property>
-			</bean>
-		</property>
-	</bean>-->
-	
-	<!-- tutorial 9 Referenciando Beans la etiqueta alias en el atributo alias se establece
-		 el nombre con el cual se obtendra el bean en la aplicacion
-	-->
-	<alias name="persona" alias="personaBeans"></alias>	
-	
-	<!-- tutorial 10 Colecciones List cuando una propiedad contienes multiples elementos Array List
-		 recomendado para valores finitos ejemplo sexo estado civil
-	 -->
-	<!--<bean id="persona" class="com.spring.beans.Persona">
-		<property name="nombre" value="Gringo Jose"></property>
-		<property name="id" value="1"></property>
-		<property name="apodo" value="Pancho Villa"></property>
-		<property name="pais" ref="pais"></property>
-	</bean>
-	<bean id="pais" class="com.spring.beans.Pais">
-		<property name="nombre" value="Peru"></property>
-		<property name="ciudades">		
-			<list>
-				<ref bean="ciudad1"></ref>
-				<ref bean="ciudad2"></ref>
-				<ref bean="ciudad3"></ref>
-			</list>
-		</property>
-	</bean>
-	<bean id="ciudad1" class="com.spring.beans.Ciudad">
-		<property name="nombre" value="CARACAS"></property>
-	</bean>
-	<bean id="ciudad2" class="com.spring.beans.Ciudad">
-		<property name="nombre" value="LIMA"></property>
-	</bean>
-	<bean id="ciudad3" class="com.spring.beans.Ciudad">
-		<property name="nombre" value="BANKOC"></property>
-	</bean>-->
-	
-	<!-- Tutorial 11 autowire -->
-	
 </beans>

@@ -5,7 +5,7 @@ public class Persona {
 	private int id;
 	private String nombre;
 	private String apodo;
-	private Pais pais;
+
 	
 	
 	public Persona(int id, String nombre, String apodo) {
@@ -17,11 +17,6 @@ public class Persona {
 	
 	public Persona(int id){
 		this.id = id;
-	}
-	
-	public Pais pais() {
-		
-		return pais;
 	}
 
 	public int getId() {
@@ -48,9 +43,7 @@ public class Persona {
 		this.apodo = apodo;
 	}
 
-	public void setPais(Pais pais) {
-		this.pais = pais;
-	}
+
 	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", apodo=" + apodo +" ]";
