@@ -6,7 +6,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-import com.spring.beans.Mundo;
 import com.spring.beans.Persona;
 
 public class App {
@@ -17,8 +16,10 @@ public class App {
 	  ApplicationContext appContext = new ClassPathXmlApplicationContext("com/spring/xml/beans.xml");
 	  
 	  Persona persona = (Persona) appContext.getBean("persona");
-	  
-	  System.out.print("Apodo :" + persona.toString());
+	  Persona persona2 = (Persona) appContext.getBean("persona");
+
+	  System.out.println(persona);
+	  System.out.println(persona2);
 	  
 	  //cerrando el contexto
 	  ((ConfigurableApplicationContext)appContext).close();

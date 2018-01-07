@@ -6,6 +6,7 @@ public class Persona {
 	private String nombre;
 	private String apodo;
 	private Pais pais;
+	private Ciudad ciudad;
 
 	
 	
@@ -17,7 +18,16 @@ public class Persona {
 	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
+	
 
+	public Ciudad getCiudad() {
+		return ciudad;
+	}
+	
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -43,10 +53,12 @@ public class Persona {
 	}
 
 
-	@Override
+	/*@Override
 	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", apodo=" + apodo + " Pais" + this.getPais().getNombre() + " Ciudad "+  this.getPais().getCiudades().get(0).getNombre()+" ]";
-	}
+		return "Persona [id=" + id + ", nombre=" + nombre + ", apodo=" + apodo + " Pais" + this.getPais().getNombre() + " Ciudad "+  this.getCiudad().getNombre()+" ]";
+	}*/
+
+
 	
 	
 }
