@@ -14,13 +14,29 @@
 	</bean>
 	 <!-- Inyeccion de objeto con el atributo de ref ciudad   -->
 	
+	
 	<bean id="pais" class="com.spring.beans.Pais">
 		<property name="nombre" value="Peru"></property>
-		<property name="ciudad" ref="ciudad"></property>
+		<!-- Propiedades tipo lista -->
+		<property name="ciudades">
+			<list>
+				<ref bean="ciudad1"/>
+				<ref bean="ciudad2"/>
+				<ref bean="ciudad3"/>
+			</list>
+		</property>
 	</bean>
-	<!-- Bean ciudad -->
-	<bean id="ciudad" class="com.spring.beans.Ciudad">
+	<!-- Bean ciudad 1 -->
+	<bean id="ciudad1" class="com.spring.beans.Ciudad">
+		<property name="nombre" value="Caracas"></property>
+	</bean> 
+	<!-- Bean ciudad 2 -->
+	<bean id="ciudad2" class="com.spring.beans.Ciudad">
 		<property name="nombre" value="Lima"></property>
+	</bean> 
+	<!-- Bean ciudad 3 -->
+	<bean id="ciudad3" class="com.spring.beans.Ciudad">
+		<property name="nombre" value="Buenos Aires"></property>
 	</bean> 
 	
 </beans>

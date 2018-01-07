@@ -45,7 +45,7 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", apodo=" + apodo + " Pais" + this.getPais().getNombre() + " Ciudad "+  this.getPais().getCiudad().getNombre()+" ]";
+		return "Persona [id=" + id + ", nombre=" + nombre + ", apodo=" + apodo + " Pais" + this.getPais().getNombre() + " Ciudad "+  this.getPais().getCiudades().get(0).getNombre()+" ]";
 	}
 	
 	

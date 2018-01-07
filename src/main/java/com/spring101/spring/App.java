@@ -5,7 +5,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.spring.beans.AppConfig;
+
 import com.spring.beans.Mundo;
 import com.spring.beans.Persona;
 
@@ -18,7 +18,7 @@ public class App {
 	  
 	  Persona persona = (Persona) appContext.getBean("persona");
 	  
-	  System.out.print(persona.toString());
+	  System.out.print("Apodo :" + persona.toString());
 	  
 	  //cerrando el contexto
 	  ((ConfigurableApplicationContext)appContext).close();
