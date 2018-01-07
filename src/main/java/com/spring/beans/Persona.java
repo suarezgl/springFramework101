@@ -9,6 +9,14 @@ public class Persona {
 	private Ciudad ciudad;
 
 	
+	public void initMethod() {
+		System.out.println("Iniciando!!");
+		
+	}
+	
+	public void destroyMethod(){
+		System.out.println("Destruyendo!!");
+	}
 	
 	public Pais getPais() {
 		return pais;
