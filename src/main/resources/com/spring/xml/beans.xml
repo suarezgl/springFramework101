@@ -2,9 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-init-method="initMethod" default-destroy-method="destroyMethod">
-
-    <bean id="persona" class="com.spring.beans.Persona" autowire="byName" scope="singleton">
+	>
+    <bean class="com.spring.beans.PostProcessorBean"></bean>
+    <bean id="persona" class="com.spring.beans.Persona" autowire="byName" scope="prototype">
 		<property name="nombre" value="Gringo Jose"></property>
 		<property name="id" value="1"></property>
 		<property name="apodo" value="Pancho Villa"></property>

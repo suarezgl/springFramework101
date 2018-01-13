@@ -19,8 +19,7 @@ public class App {
 	  Persona persona2 = (Persona) appContext.getBean("persona");
 
 	  System.out.println(persona);
-	  System.out.println(persona2);
-	  
+	  System.out.println(persona2);  
 	  //cerrando el contexto
 	  ((ConfigurableApplicationContext)appContext).close();
 	}
